@@ -143,12 +143,23 @@ p {
   .menu-btn {
     display: none;
   }
-  .menu{
+  .menu {
     position: static;
     opacity: 1;
+    width: auto;
     pointer-events: auto;
     flex-direction: row;
-    height: calc(var(--header-height) - 0.5rem);
+  }
+  .menu a {
+    padding: 0 1rem;
+  }
+
+  .menu a:last-child{
+    padding: 0 0.5rem 0 1rem;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
   }
 }
 /*******************Utilities************************/
