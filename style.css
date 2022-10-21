@@ -92,6 +92,31 @@ p {
   line-height: 1.6;
 }
 /**********************Components********************/
+/**********************Heroe Image********************/
+.hero-image {
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: var(--hero-attachment);
+  /* width: 100%;
+  min-height: 100vh; */
+}
+
+.hero-image-opacity {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color);
+}
+.hero-image-title {
+  font-size: 7.5vw;
+  color: var(--hero-text-color);
+}
+
 /**********************Menu********************/
 .menu-btn {
   outline: thin solid var(--first-color); /*Outline color*/
@@ -154,7 +179,7 @@ p {
     padding: 0 1rem;
   }
 
-  .menu a:last-child{
+  .menu a:last-child {
     padding: 0 0.5rem 0 1rem;
   }
 
@@ -175,6 +200,18 @@ p {
 
 .none {
   display: none;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display:inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--first-color);
 }
 /**************SiteStyles****************************/
 header {
