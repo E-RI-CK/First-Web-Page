@@ -218,6 +218,10 @@ progress::-moz-progress-bar {
   justify-content: space-between;
 }
 /*******************Utilities************************/
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+
 .box-shadow-1 {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
 }
@@ -242,11 +246,11 @@ progress::-moz-progress-bar {
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--first-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.btn:hover{
-  box-shadow: 0.3rem 0.3rem #a31555;
+.btn:hover {
+  box-shadow: 0.3rem 0.4rem #a31555;
 }
 
 .gray-scale {
@@ -255,6 +259,16 @@ progress::-moz-progress-bar {
 
 .section {
   padding: 2rem 1rem;
+  scroll-margin-top: calc(var(--header-height) - 1.5rem);
+}
+.section-title {
+  border-top: thin solid var(--first-color);
+  border-bottom: thin solid var(--first-color);
+  width: 250px;
+  margin: 2rem auto;
+  text-align: center;
+  color: var(--title-color);
+  padding: 1rem;
 }
 
 .text-center {
@@ -270,7 +284,7 @@ progress::-moz-progress-bar {
 }
 
 @media screen and (min-width: 1024px) {
-  .full-lg-screen{
+  .full-lg-screen {
     width: 100%;
     min-height: 100vh;
   }
@@ -286,8 +300,14 @@ progress::-moz-progress-bar {
   .text-lg-right {
     text-align: right;
   }
+  .text-lg-justify {
+    text-align: justify;
+  }
+  .font-size-about {
+    font-size: 0.9rem;
+  }
 }
-/**************SiteStyles****************************/
+/**************SiteStyles(Particular Styles)****************************/
 .about > article {
   margin-bottom: 2rem;
 }
@@ -316,20 +336,59 @@ header {
   text-decoration: none;
 }
 
+.service-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.service-card svg {
+  margin-bottom: 1rem;
+  fill: var(--first-color);
+}
+
+.service-card h3 {
+  color: var(--title-color);
+}
+
 @media screen and (min-width: 768px) {
+  .services > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    align-content: space-around;
+  }
+
+  .services .section-title {
+    grid-column: span 2;
+  }
+
+  .container p {
+    font-size: 17px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .header {
     position: sticky;
     top: 0;
     padding: 0.5rem;
     height: calc(var(--header-height) - 0.5rem);
   }
-  .about{
-    display: grid;
-    grid-template-columns: repeat(3,30%);
-    justify-content: space-between;
-    align-items: center;
+
+  .services > .container {
+    grid-template-columns: repeat(3, 30%);
+    font-size: 18px;
+  }
+
+  .services .section-title {
+    grid-column: span 3;
   }
 }
