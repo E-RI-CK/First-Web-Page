@@ -336,6 +336,28 @@ header {
   text-decoration: none;
 }
 
+.portfolio-card{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.portfolio-card img{
+  max-width: 100vw;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.portfolio-card-info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .service-card {
   margin: 1rem auto;
   padding: 1rem;
