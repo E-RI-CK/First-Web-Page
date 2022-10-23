@@ -304,7 +304,7 @@ progress::-moz-progress-bar {
     text-align: justify;
   }
   .font-size-about {
-    font-size: 0.9rem;
+    font-size: 0.05rem;
   }
 }
 /**************SiteStyles(Particular Styles)****************************/
@@ -386,7 +386,7 @@ header {
   }
 
   .container p {
-    font-size: 17px;
+    font-size: 0.9rem;
   }
 }
 
@@ -407,7 +407,7 @@ header {
 
   .services > .container {
     grid-template-columns: repeat(3, 30%);
-    font-size: 18px;
+    font-size: 10px;
   }
 
   .services .section-title {
