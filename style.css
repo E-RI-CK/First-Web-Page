@@ -189,6 +189,28 @@ p {
   }
 }
 
+/******************Modal********************************/
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--black-alpha-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* opacity: 0;
+  pointer-events: none; */
+}
+
+.portfolio a:link .modal {
+  opacity: 1;
+}
+
 /*******************Progress Bar************************/
 progress {
   width: 100%;
@@ -392,12 +414,11 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-
   .portfolio .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .services > .container {
     display: grid;
     grid-template-columns: repeat(2, 45%);
