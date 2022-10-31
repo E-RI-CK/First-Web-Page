@@ -202,13 +202,31 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* opacity: 0;
-  pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
 }
 
-.portfolio a:link .modal {
+.modal-content{
+  position: relative;
+}
+
+.modal-clase{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-close svg{
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
+}
+
+[id|="trabajo"]:target{
   opacity: 1;
+  pointer-events: auto;
+  background-color: var(--black-alpha-color);
 }
 
 /*******************Progress Bar************************/
@@ -326,7 +344,7 @@ progress::-moz-progress-bar {
     text-align: justify;
   }
   .font-size-about {
-    font-size: 0.05rem;
+    font-size: 12px;
   }
 }
 /**************SiteStyles(Particular Styles)****************************/
@@ -356,6 +374,13 @@ header {
   font-weight: bold;
   font-size: 2rem;
   text-decoration: none;
+}
+
+.modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  /* font-size: 3.5vw; */
 }
 
 .portfolio-card {
@@ -389,6 +414,7 @@ header {
 .portfolio-card:hover .portfolio-card-info {
   opacity: 1;
   pointer-events: auto;
+  font-size: 3.5vw;
 }
 
 .portfolio-card-info > div {
@@ -398,19 +424,27 @@ header {
   width: 100%;
 }
 
+.portfolio-modal{
+  background-color: var(--white-color);
+  /* display: flex;
+  flex-direction: column;
+  max-width: 400px; */
+  padding: 1rem;
+}
+
 .service-card {
   margin: 1rem auto;
   padding: 1rem;
   text-align: center;
 }
 
+.service-card h3 {
+  color: var(--title-color);
+}
+
 .service-card svg {
   margin-bottom: 1rem;
   fill: var(--first-color);
-}
-
-.service-card h3 {
-  color: var(--title-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -430,9 +464,15 @@ header {
     grid-column: span 2;
   }
 
-  .container p {
+  /* .container p {
     font-size: 0.9rem;
+  } */
+  .portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+    font-size: 2vw;
   }
+  
 }
 
 @media screen and (min-width: 1024px) {
@@ -441,6 +481,7 @@ header {
     grid-template-columns: repeat(3, 30%);
     justify-content: space-between;
     align-items: center;
+    /* font-size: 10px; */
   }
 
   .header {
@@ -453,6 +494,12 @@ header {
   .portfolio .container {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
+  }
+
+  .portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+    font-size: 1.2vw;
   }
 
   .services > .container {
