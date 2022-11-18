@@ -198,7 +198,7 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: var(--black-alpha-color);
+  /* background-color: var(--black-alpha-color); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,23 +207,23 @@ p {
   transition: all 1s ease-in-out;
 }
 
-.modal-content{
+.modal-content {
   position: relative;
 }
 
-.modal-clase{
+.modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
-.modal-close svg{
+.modal-close svg {
   width: 3rem;
   height: 3rem;
   fill: var(--first-color);
 }
 
-[id|="trabajo"]:target{
+[id|="trabajo"]:target {
   opacity: 1;
   pointer-events: auto;
   background-color: var(--black-alpha-color);
@@ -375,16 +375,25 @@ header {
   font-size: 2rem;
   text-decoration: none;
 }
+.modal-content {
+  position: relative;
+}
 
-.modal-close{
+.modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  /* font-size: 3.5vw; */
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
 }
 
 .portfolio-card {
   position: relative;
+  text-align: center;
   width: 100%;
   margin: 0 auto;
   display: block;
@@ -414,7 +423,7 @@ header {
 .portfolio-card:hover .portfolio-card-info {
   opacity: 1;
   pointer-events: auto;
-  font-size: 3.5vw;
+  /* font-size: 3.5vw; */
 }
 
 .portfolio-card-info > div {
@@ -424,12 +433,35 @@ header {
   width: 100%;
 }
 
-.portfolio-modal{
-  background-color: var(--white-color);
-  /* display: flex;
-  flex-direction: column;
-  max-width: 400px; */
+.portfolio-modal {
   padding: 1rem;
+  max-width: 300px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  font-size: 1rem;
+}
+.portfolio-modal p {
+  font-size: 10.7px;
+}
+.portfolio-modal h3 {
+  border-bottom: medium solid var(--first-color);
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  color: var(--title-color);
+  font-size: 13.8px;
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-auto-rows: 0.8rem;
+  font-size: 10.8px;
+}
+
+.portfolio-details b {
+  color: var(--first-color);
 }
 
 .service-card {
@@ -453,6 +485,31 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .portfolio-details {
+    font-size: 14px;
+    grid-auto-rows: 2rem;
+    align-self: center;
+  }
+
+  .portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+    font-size: 2vw;
+  }
+
+  .portfolio-info {
+    margin: 2rem;
+  }
+
+  .portfolio-modal {
+    max-width: 800px;
+    flex-direction: row;
+  }
+
+  .portfolio-modal p {
+    font-size: 14.7px;
+  }
+
   .services > .container {
     display: grid;
     grid-template-columns: repeat(2, 45%);
@@ -467,12 +524,6 @@ header {
   /* .container p {
     font-size: 0.9rem;
   } */
-  .portfolio-card:hover .portfolio-card-info {
-    opacity: 1;
-    pointer-events: auto;
-    font-size: 2vw;
-  }
-  
 }
 
 @media screen and (min-width: 1024px) {
