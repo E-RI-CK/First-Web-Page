@@ -179,7 +179,7 @@ p {
 
 /**********************Contact Form********************/
 .contact-form {
-  margin: 1rem auto;
+  margin: 1rem auto 4rem auto;
   padding: 1rem;
   max-width: 800px;
   width: 90%;

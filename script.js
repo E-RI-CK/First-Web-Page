@@ -26,7 +26,7 @@
     $form.addEventListener("submit", (e) => {
       e.preventDefault();
       $loader.classList.remove("none");
-      fetch("https://formsubmit.co/ajax/avalerom@uni.pe", {
+      fetch("https://formsubmit.co/ajax/andro_valero713@hotmail.com", {
         method: "POST",
         body: new FormData(e.target),
       })
@@ -48,7 +48,7 @@
           $loader.classList.add("none");
           setTimeout(() => {
             location.hash = "#close";
-          }, 3000);
+          }, 10000);
         });
     });
   })(document);
