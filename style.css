@@ -553,6 +553,19 @@ progress::-moz-progress-bar {
   height: 2rem;
 }
 
+.footer {
+  background-color: var(--third-color);
+  height: 2rem;
+  margin-bottom: 63px;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--gray-light-color);
+}
+
+.footer a {
+  text-decoration: none;
+}
+
 header {
   position: fixed;
   left: 0;
@@ -757,6 +770,10 @@ header {
     top: 0;
     padding: 0.5rem;
     height: calc(var(--header-height) - 0.5rem);
+  }
+
+  .footer {
+    margin-bottom: 0;
   }
 
   .portfolio .container {
