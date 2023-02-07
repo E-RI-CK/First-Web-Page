@@ -44,6 +44,12 @@ body {
   font-family: var(--font);
 }
 
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 a {
   color: var(--link-color);
   transition: all 0.5 ease-in-out 1s;
